@@ -1,4 +1,4 @@
-# Abstract Factory :full_moon:
+# Abstract Factory :waning_gibbous_moon:
 
 ## 1. Nombre del patrón
 
