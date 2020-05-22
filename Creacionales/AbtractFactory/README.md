@@ -1,5 +1,5 @@
 # Abstract Factory
-1. Nombre del atrón
+## 1. Nombre del atrón
 2. Clasificación del patrón 
 3. Intención
 4. Tambien conocido como
