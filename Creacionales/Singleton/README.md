@@ -1,10 +1,10 @@
-# Abstract Factory :waning_gibbous_moon:
+# Singleton :waning_gibbous_moon:
 
 ## 1. Introducción.
 
 Utilizaremos el patrón Singleton cuando por alguna razón necesitemos que exista sólo una instancia (un objeto) de una determinada Clase. Muchas veces deseamos esto y mas alla de desearlo lo veremos obligatorio hacerlo, como por ejemplo alguna conexión a una base de datos. Cabe mencionar y es curioso, que a Singleton tambien se le conoce como un antipatrón, es decir que en vez de aportar soluciones buenas o positivas a nuestro software, este trae problemas, un mal uso de Singleton nos podria hacer caer en estas trampas.
 
-![intIMg](img\singleton.png)
+![intIMg](img/singleton.png)
 
 ## 1. Nombre del patrón.
 
@@ -39,7 +39,7 @@ Los criterios para aplicar este patrón son:
 ## 7. Estructura.
 El siguiente diagrama representa Singleton:
 
-![umlSingleton](img\uml.png)
+![umlSingleton](img/uml.png)
 
 ## 8. Participantes.
 
