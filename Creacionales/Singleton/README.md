@@ -56,15 +56,25 @@ Como se menciono en el apartado de **Participantes** , Singleton se encarga de c
 
 ## 10. Consecuencias.
 
-:white_check_mark:
--  Estas seguro que una clase tiene una sola instancia.
-- Ganas un punto de acceso global a esa instancia.
 
-- El objeto Singleton es inicializado solo cuando es requerido por primera vez. 
+:white_check_mark: Estas seguro que una clase tiene una sola instancia.
 
+:white_check_mark: Ganas un punto de acceso global a esa instancia.
+
+:white_check_mark: El objeto Singleton es inicializado solo cuando es requerido por primera vez. 
+
+
+
+:x: Viola el principio de Responsabilidad Unica. El patron resuelve dos problemas al tiempo.
+ 
+:x: El patrón Singleton puede disfrazar un mal diseño, por ejemplo cuando los componentes del porgrama se conocen mucho entre si.
+
+:x: El patrón requiere un tratamiento especial en un entorno multiproceso para que múltiples hilos no creen un objeto singleton varias veces.
 
 
 ## 11. Implementación.
+
+Una acercamiento de la implementación, es como se describio en el item de la participación, 
 
 ## 12. Código de ejemplo.
 
