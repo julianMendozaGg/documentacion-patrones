@@ -43,9 +43,7 @@ El siguiente diagrama representa Singleton:
 
 ## 8. Participantes.
 
-- Singleton: La clase Singleton declara el metodo estatico **getInstance()** el cual retorna o devuelve la misma instancia de esta propia clase.
-    
-    El constructor debe ser escondido del cliente. Llamando al metodo **getInstance()** debe ser la unica manera de obtener el objeto de la clase Singleton
+- Singleton: Esta es la clase que se encarga de si misma de crear la unica instancia que existira de la clase, y la que esconde la creación de esta en un metodo estatico, es decir un metodo propio de la clase y no del objeto
 
 - Client: El cual necesita obtener el objeto de Singleton.
 
@@ -74,10 +72,66 @@ Como se menciono en el apartado de **Participantes** , Singleton se encarga de c
 
 ## 11. Implementación.
 
-Una acercamiento de la implementación, es como se describio en el item de la participación, 
+La clase Singleton declara el metodo estatico **getInstance()** el cual retorna o devuelve la misma instancia de esta propia clase.
+    
+El constructor debe ser escondido del cliente. Llamando al metodo **getInstance()** debe ser la unica manera de obtener el objeto de la clase Singleton 
 
 ## 12. Código de ejemplo.
+:one: Este es el codigo por parte de Singleton.
+``` java
+public final class Singleton {
+    private static Singleton instance;
+    public String value;
 
+    private Singleton(String value) {
+        // The following code emulates slow initialization.
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException ex) {
+            ex.printStackTrace();
+        }
+        this.value = value;
+    }
+
+    public static Singleton getInstance(String value) {
+        if (instance == null) {
+            instance = new Singleton(value);
+        }
+        return instance;
+    }
+}
+```
+:two: Este es el codigo por parte del cliente:
+
+``` java
+public class DemoSingleThread {
+    public static void main(String[] args) {
+        System.out.println("If you see the same value, then singleton was reused (yay!)" + "\n" +
+                "If you see different values, then 2 singletons were created (booo!!)" + "\n\n" +
+                "RESULT:" + "\n");
+        Singleton singleton = Singleton.getInstance("FOO");
+        Singleton anotherSingleton = Singleton.getInstance("BAR");
+        System.out.println(singleton.value);
+        System.out.println(anotherSingleton.value);
+    }
+}
+```
+:three: Salida
+```
+If you see the same value, then singleton was reused (yay!)
+If you see different values, then 2 singletons were created (booo!!)
+
+
+RESULT:
+
+FOO
+FOO
+```
 ## 13. Usos conocidos.
 
+Muy usado en WidgetKits y en el manejo de Sesiones.
+
 ## 14. Patrones Relacionados.
+
+- Abstract Factory, Builder y Prototype, todo pueden ser implementados como Singleton. 
+- Una clase Facade se puede transformar en Singleton ya que un solo objeto fachada es suficiente en la mayoria de los casos.
