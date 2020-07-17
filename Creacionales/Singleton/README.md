@@ -135,3 +135,11 @@ Muy usado en WidgetKits y en el manejo de Sesiones.
 
 - Abstract Factory, Builder y Prototype, todo pueden ser implementados como Singleton. 
 - Una clase Facade se puede transformar en Singleton ya que un solo objeto fachada es suficiente en la mayoria de los casos.
+
+![finalImage](img/singletonGraf.png)
+
+# Referencias Bibliograficas
+
+1. Design Pattern, Cretional Patterns, Singleton, REFACTORING -GURU-
+https://refactoring.guru/design-patterns/singleton
+2. Patrones Creacionales, Singleton, Daza Corredor Alejandro Paolo.
